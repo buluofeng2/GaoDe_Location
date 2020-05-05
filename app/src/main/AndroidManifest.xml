@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
     <permission android:name="android.permission.CHANGE_CONFIGURATION" /> <!-- 请求网络 -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 需要运行时注册的权限 -->
@@ -24,12 +25,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LocationManager"></activity>
-        <!-- 设置key -->
+        <activity android:name=".Navi.RouteNaviActivity"></activity>
+        <activity android:name=".Navi.NaviTest" />
+        <activity android:name=".com.sfx.caretestmap.tripmodule.TripHostModuleWidget" />
+        <activity android:name=".com.sfx.caretestmap.tripmodule.TripHostModuleDelegate" />
+        <activity android:name=".com.sfx.caretestmap.tripmodule.TitleBarWidget" />
+        <activity
+            android:name=".com.sfx.caretestmap.tripmodule.ITripHostModule"
+            android:label="@string/title_activity_itrip_host_module"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".com.sfx.caretestmap.tripmodule.HostMapWidget" />
+        <activity android:name=".com.sfx.caretestmap.tripmodule.ChooseLocationWidget" />
+        <activity android:name=".LocationManager" /> <!-- 设置key -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="5d8a2057a09064323b0ed27cd6ed02dd" /> <!-- 定位需要的服务 -->
-        <service android:name="com.amap.api.location.APSService"></service>
+        <service android:name="com.amap.api.location.APSService" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

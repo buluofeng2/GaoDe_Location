@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.amap.api.location.AMapLocationClient;
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.model.MyLocationStyle;
@@ -15,6 +16,7 @@ import com.amap.api.maps.model.MyLocationStyle;
 
 public class MainActivity extends Activity {
     MapView mMapView = null;
+    private AMapLocationClient locationClientContinue = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +62,10 @@ public class MainActivity extends Activity {
         super.onDestroy();
         //在activity执行onDestroy时执行mMapView.onDestroy()，销毁地图
         mMapView.onDestroy();
+        if(null != locationClientContinue){
+            locationClientContinue.onDestroy();
+            locationClientContinue = null;
+        }
     }
     @Override
     protected void onResume() {

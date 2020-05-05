@@ -3,4 +3,5 @@
 
     <string name="startLocation">开始定位</string>
     <string name="stopLocation">停止定位</string>
+    <string name="title_activity_itrip_host_module">ITripHostModule</string>
 </resources>
