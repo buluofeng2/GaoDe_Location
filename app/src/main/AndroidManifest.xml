@@ -25,23 +25,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Navi.RouteNaviActivity"></activity>
-        <activity android:name=".Navi.NaviTest" />
-        <activity android:name=".com.sfx.caretestmap.tripmodule.TripHostModuleWidget" />
-        <activity android:name=".com.sfx.caretestmap.tripmodule.TripHostModuleDelegate" />
-        <activity android:name=".com.sfx.caretestmap.tripmodule.TitleBarWidget" />
-        <activity
-            android:name=".com.sfx.caretestmap.tripmodule.ITripHostModule"
-            android:label="@string/title_activity_itrip_host_module"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".com.sfx.caretestmap.tripmodule.HostMapWidget" />
-        <activity android:name=".com.sfx.caretestmap.tripmodule.ChooseLocationWidget" />
-        <activity android:name=".LocationManager" /> <!-- 设置key -->
+
+
+        <activity android:name=".LocationManager" />
+        <!-- 设置key -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="5d8a2057a09064323b0ed27cd6ed02dd" /> <!-- 定位需要的服务 -->
+            android:value="5d8a2057a09064323b0ed27cd6ed02dd" />
+        <!-- 定位需要的服务 -->
         <service android:name="com.amap.api.location.APSService" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,6 +41,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.amap.api.navi.AmapRouteActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
     </application>
 
 </manifest>

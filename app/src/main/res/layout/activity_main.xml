@@ -13,6 +13,12 @@ android:layout_height="match_parent">
         android:layout_height="wrap_content"
         android:text="定位页面"/>
 
+    <Button
+        android:id="@+id/navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="导航页面"/>
+
     <com.amap.api.maps.MapView
 
         android:id="@+id/map"
